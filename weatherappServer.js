@@ -6,6 +6,7 @@ var express        = require("express");
 var app            = express();
 var bodyParser     = require("body-parser");
 var request        = require('request');
+var http = require('http').Server(app);
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
@@ -69,6 +70,6 @@ console.log(req.body)
 //      START SERVER
 // =========================================================================
 
-app.listen(3000, function(){
+http.listen(3000, function(){
     console.log(`The nodeSignatures server has started on port 3000!`);
 });
