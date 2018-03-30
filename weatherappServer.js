@@ -70,6 +70,6 @@ console.log(req.body)
 //      START SERVER
 // =========================================================================
 
-http.listen(3000, function(){
+http.listen(process.env.PORT || 3000, function(){
     console.log(`The nodeSignatures server has started on port 3000!`);
 });
