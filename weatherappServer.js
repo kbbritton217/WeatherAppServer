@@ -7,9 +7,11 @@ var app            = express();
 var bodyParser     = require("body-parser");
 var request        = require('request');
 var http = require('http').Server(app);
+var cors = require('cors');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
+app.use(cors());
 
 
 //this is a comment
