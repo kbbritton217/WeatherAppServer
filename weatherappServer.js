@@ -21,8 +21,8 @@ app.post("/weather", function(req, res){
 console.log('req.body is:')
 console.log(req.body)
 
-    var lat = req.body.city.coord.lat;
-    var long = req.body.city.coord.lon;
+    var lat = req.body.lat;
+    var long = req.body.lon;
     
     darkUrl = 'https://api.darksky.net/' + 'forecast/' + '3895576db6a13a93ab8cf16f4c5c540e' + '/' + lat + ',' + long + '?exclude=currently,minutely,flags,alerts';
 
